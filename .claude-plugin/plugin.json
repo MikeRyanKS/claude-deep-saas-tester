@@ -1,0 +1,9 @@
+{
+  "name": "deep-saas-tester",
+  "version": "1.0.0",
+  "description": "Act as a seasoned full-stack SaaS QA engineer: a deep, adversarial, evidence-based methodology for testing any feature of a multi-tenant SaaS app (Supabase + React Query) across backend, database, and live UI/UX.",
+  "author": { "name": "MikeRyanKS", "url": "https://github.com/MikeRyanKS" },
+  "homepage": "https://github.com/MikeRyanKS/claude-deep-saas-tester",
+  "license": "MIT",
+  "keywords": ["qa", "testing", "audit", "saas", "supabase", "react-query", "skill"]
+}

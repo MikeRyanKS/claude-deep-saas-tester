@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mikeryanks-skills",
+  "description": "Claude Code skills by MikeRyanKS",
+  "owner": {
+    "name": "MikeRyanKS",
+    "url": "https://github.com/MikeRyanKS"
+  },
+  "plugins": [
+    {
+      "name": "deep-saas-tester",
+      "description": "Act as a seasoned full-stack SaaS QA engineer: a deep, adversarial, evidence-based methodology for testing any feature of a multi-tenant SaaS app (Supabase + React Query) across backend, database, and live UI/UX.",
+      "author": { "name": "MikeRyanKS" },
+      "category": "testing",
+      "source": "./",
+      "homepage": "https://github.com/MikeRyanKS/claude-deep-saas-tester"
+    }
+  ]
+}
