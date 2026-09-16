@@ -25,6 +25,8 @@ None were visible from reading the UI once. All were found by refusing to trust 
 
 ## What it does
 
+It also handles a bigger ask: **"audit the whole app, module by module, until every feature is covered."** A single-feature audit and a full-app sweep use the same six phases below, but a full-app sweep is too big for one context window and needs to survive a context reset or a brand-new session picking it up cold — so the skill sets up a persistent tracker file first (every module enumerated up front, a status per module, a session log, and a dedicated place for cross-cutting findings once the same bug shape turns up in two or three unrelated modules). It also knows the sharpest failure mode unique to full-app auditing: a fix made while auditing module N — especially a new permission/RLS restriction — can regress a module M that was already marked done, if the restriction was modeled only on module N's own dedicated page instead of on every place in the app that touches the same data.
+
 Six phases, run in order:
 
 | Phase | What happens |
@@ -38,7 +40,7 @@ Six phases, run in order:
 
 ### The bug-pattern catalog
 
-[`skills/deep-saas-tester/references/known-bug-patterns.md`](skills/deep-saas-tester/references/known-bug-patterns.md) is a catalog of **34 recurring bug classes**, each with:
+[`skills/deep-saas-tester/references/known-bug-patterns.md`](skills/deep-saas-tester/references/known-bug-patterns.md) is a catalog of **39 recurring bug classes**, each with:
 
 - a general **mechanism** description,
 - a concrete **"how to find more instances"** check (a grep, a SQL query, a comparison), and
@@ -105,6 +107,7 @@ Good prompts:
 - `Audit the reports dashboard. I think some numbers are wrong.`
 - `Before we ship the new permissions screen, stress-test it like a real QA engineer.`
 - `/deep-saas-tester everywhere customer data surfaces, not just the profile page`
+- `/deep-saas-tester the whole app — all features, one by one, till they're all done`
 
 It works best when Claude has:
 

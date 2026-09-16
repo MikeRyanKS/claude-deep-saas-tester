@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "deep-saas-tester",
-      "description": "Act as a seasoned full-stack SaaS QA engineer: a deep, adversarial, evidence-based methodology for testing any feature of a multi-tenant SaaS app (Supabase + React Query) across backend, database, and live UI/UX.",
+      "description": "Act as a seasoned full-stack SaaS QA engineer: a deep, adversarial, evidence-based methodology for testing any feature of a multi-tenant SaaS app (Supabase + React Query) across backend, database, and live UI/UX — from one feature to a full-app, module-by-module sweep.",
       "author": { "name": "MikeRyanKS" },
       "category": "testing",
       "source": "./",
